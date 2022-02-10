@@ -120,17 +120,13 @@ async function updateCode() {
   }
 
   const { data } = await axios({
-    url: "https://accounts.spotify.com/api/token",
+    url: "https://accounts.spotify.com/api/token?grant_type=refresh_token&refresh_token=" + config.get('refresh_token'),
     method: "POST",
     headers: {
       Authorization: `Basic ${Buffer.from(
         `${config.get('client_id')}:${config.get('client_secret')}`
       ).toString("base64")}`,
       "Content-Type": "application/x-www-form-urlencoded",
-    },
-    data: {
-      grant_type: "refresh_token",
-      refresh_token: config.get('refresh_token'),
     },
   });
 
