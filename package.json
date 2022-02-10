@@ -6,6 +6,11 @@
   "main": "./dist/index.js",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "url": "https://github.com/Pixwl/spotify-cli-utility",
+    "type": "git",
+    "directory": "./"
+  },
   "scripts": {
     "deploy-local": "tsc && npm i -g .",
     "remove-local": "npm remove -g spotify-cli-utility`"
