@@ -14,7 +14,10 @@ import Conf from 'conf';
 import moment from 'moment';
 
 const program = new Command();
-const config = new Conf();
+const config = new Conf({
+  projectName: "spotify-cli-utility",
+  projectVersion: process.version
+});
 
 const CONSTANTS = {
   SPOTIFY_SCOPES:
