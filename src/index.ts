@@ -9,7 +9,6 @@ import { createHash } from "crypto";
 import Randomstring from "randomstring";
 import Url from "url-parse";
 import axios from "axios";
-import fs from 'fs';
 import Conf from 'conf';
 import moment from 'moment';
 
@@ -496,4 +495,4 @@ async function lyrics() {
   }
 }
 
-program.parse(); 
+program.parse();
